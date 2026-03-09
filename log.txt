@@ -1,0 +1,7 @@
+192.168.1.10 - GET /index.html
+192.168.1.10 - GET /login
+192.168.1.10 - GET /home
+192.168.1.10 - GET /dashboard
+192.168.1.10 - GET /admin
+
+192.168.1.50 - GET /login?username=admin' OR '1'='1
