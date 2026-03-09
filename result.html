@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Threat Detection Result</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+</head>
+<body>
+
+<h2>Threat Detection Result</h2>
+
+<table border="1">
+<tr>
+<th>Suspicious Activity</th>
+</tr>
+
+{% for item in data %}
+<tr>
+<td>{{ item }}</td>
+</tr>
+{% endfor %}
+
+</table>
+
+<h3>Attack Visualization</h3>
+
+<img src="{{ url_for('static', filename='attack_graph.png') }}" width="500">
+<br><br>
+
+<a href="/">Upload Another File</a>
+
+<br><br>
+
+<a href="/dashboard">View Attack Dashboard</a>
+</body>
+</html>

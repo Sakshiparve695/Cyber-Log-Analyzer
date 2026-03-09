@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+
+<title>Cyber Security Dashboard</title>
+
+<link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+
+</head>
+
+<body>
+
+<h1>Live Attack Dashboard</h1>
+
+<table>
+
+<tr>
+<th>IP Address</th>
+<th>Attack Type</th>
+<th>Details</th>
+<th>Time</th>
+</tr>
+
+{% for attack in attacks %}
+
+<tr>
+<td>{{ attack[0] }}</td>
+<td>{{ attack[1] }}</td>
+<td>{{ attack[2] }}</td>
+<td>{{ attack[3] }}</td>
+</tr>
+
+{% endfor %}
+
+</table>
+
+</body>
+
+</html>
